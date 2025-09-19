@@ -1,0 +1,68 @@
+.details-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: #f8f9fa;
+    margin-top: -8%;
+    padding: 20px;
+    /* Added padding for better appearance on smaller screens */
+    flex-wrap: wrap;
+    /* Ensure elements wrap on smaller screens */
+}
+
+.my-detail-box {
+    margin-top: 10%;
+    font-size: medium;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out;
+    width: 80%;
+    /* Set a percentage width for flexibility */
+    max-width: 600px;
+    /* Limit the maximum width for large screens */
+}
+
+.my-detail-box p {
+    padding: 2px;
+    font-family: cursive;
+}
+
+.detail-area {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.Image {
+    padding: 30px;
+}
+
+.Image img {
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid ;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .my-detail-box {
+        padding: 20px;
+        /* Reduce padding for smaller screens */
+        font-size: small;
+        /* Adjust font size */
+        margin-top: 5%;
+        /* Adjust margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .my-detail-box {
+        width: 90%;
+        /* Increase width for very small screens */
+        padding: 15px;
+        /* Further reduce padding */
+        font-size: smaller;
+        /* Adjust font size */
+    }
+}

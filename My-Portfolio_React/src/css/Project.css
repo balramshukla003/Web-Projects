@@ -1,0 +1,136 @@
+/* Project Outer Container */
+.project-outer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.heading::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background-color: #0066cc;
+  display: block;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Project Container */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 30px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.project-image {
+  padding: 20px;
+  flex: 1;
+  max-width: 500px;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid saddlebrown;
+  transition: transform 0.5s;
+}
+
+.project-image img:hover {
+  transform: scale(1.01);
+}
+
+.project-details {
+  flex: 1;
+  text-align: left;
+}
+
+.project-details h2 {
+  font-size: 1.8rem;
+  color: #0066cc;
+  margin-bottom: 15px;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.project-details .btn {
+  display: inline-block;
+  background-color: #0066cc;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.project-details .btn:hover {
+  background-color: #004da2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+  }
+
+  .project-image,
+  .project-details {
+    max-width: 100%;
+  }
+
+  .project-details {
+    text-align: center;
+  }
+
+  .project-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-details p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .project-details h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-details p {
+    font-size: 0.8rem;
+  }
+
+  .project-details .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}

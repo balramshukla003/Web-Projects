@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | InnoTech</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+
+    <div class="outer-container">
+        <!-- Close button for going back -->
+        <p onclick="Back()" class="close">X</p>
+
+        <!-- Left sidebar with images and title -->
+        <div id="part1" class="side-nav">
+            <h1>Your Calculator</h1>
+            <div class="contain-image">
+                <img src="Photos/num.jpg" id="num" alt="">
+                <img src="Photos/homeCalc.jpg" id="home" alt="">
+                <img src="Photos/Network.jpg" id="network" alt="">
+                <img src="Photos/temprature.jpg" id="temperature" alt="">
+                <img src="Photos/time.jpg" id="time" alt="">
+                <img src="Photos/lenghth.jpg" id="length" alt="">
+                <img src="Photos/currency.jpg" id="currency" alt="">
+            </div>
+        </div>
+
+        <!-- Right content area with calculator and other sections -->
+        <div id="part2" class="side-nav">
+            <img src="Photos/logo.png" id="LogoIMG" alt="">
+
+            <div id="homebox" class="content">
+                <img id="IMAGEHOME" src="Photos/calcHome.jpg" alt="">
+            </div>
+
+            <div id="numbox" class="content">
+                <input type="text" id="display" disabled>
+                <div class="buttons">
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="appendToDisplay('/')">/</button>
+                    <button onclick="appendToDisplay('*')">*</button>
+                    <button onclick="appendToDisplay('-')">-</button>
+                    <button onclick="appendToDisplay('7')">7</button>
+                    <button onclick="appendToDisplay('8')">8</button>
+                    <button onclick="appendToDisplay('9')">9</button>
+                    <button onclick="appendToDisplay('+')">+</button>
+                    <button onclick="appendToDisplay('4')">4</button>
+                    <button onclick="appendToDisplay('5')">5</button>
+                    <button onclick="appendToDisplay('6')">6</button>
+                    <button onclick="calculateResult()">=</button>
+                    <button onclick="appendToDisplay('1')">1</button>
+                    <button onclick="appendToDisplay('2')">2</button>
+                    <button onclick="appendToDisplay('3')">3</button>
+                    <button onclick="appendToDisplay('0')">0</button>
+                </div>
+            </div>
+
+            <div id="temperaturebox" class="content">
+                <h1>Temperature Converter</h1>
+            
+                <div class="converter">
+                    <input type="number" id="tempInput" placeholder="Enter temperature" oninput="convertTemperature()">
+            
+                    <div class="parameter">
+                        <select id="fromTempUnit" onchange="convertTemperature()">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+            
+                        <strong>to</strong>
+            
+                        <select id="toTempUnit" onchange="convertTemperature()">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                    </div>
+                    <div id="tempResult" class="result">Converted Temperature: 0</div>
+                </div>
+            </div>
+            
+
+            <div id="timebox" class="content">
+                <h1>Time Converter</h1>
+            
+                <div class="converter">
+                    <input type="number" id="timeInput" placeholder="Enter time" oninput="convertTime()">
+            
+                    <div class="parameter">
+                        <select id="fromTimeUnit" onchange="convertTime()">
+                            <option value="seconds">Seconds</option>
+                            <option value="minutes">Minutes</option>
+                            <option value="hours">Hours</option>
+                            <option value="days">Days</option>
+                        </select>
+            
+                        <strong>to</strong>
+            
+                        <select id="toTimeUnit" onchange="convertTime()">
+                            <option value="seconds">Seconds</option>
+                            <option value="minutes">Minutes</option>
+                            <option value="hours">Hours</option>
+                            <option value="days">Days</option>
+                        </select>
+                    </div>
+                    <div id="timeResult" class="result">Converted Time: 0</div>
+                </div>
+            </div>
+            
+            <div id="networkbox" class="content">
+                <h1>Network Calculator</h1>
+                <h1>comming Soon....</h1>
+
+            </div>
+
+            <div id="currencybox" class="content">
+                <h1>Currency Converter</h1>
+
+                <div class="converter">
+                    <input type="number" id="lengthInput" placeholder="Enter length" oninput="convertLength()">
+
+                    <div class="parameter">
+                        <select id="fromUnit" onchange="convertLength()">
+                            <option value="meters">Meters</option>
+                            <option value="kilometers">Kilometers</option>
+                            <option value="inches">Inches</option>
+                            <option value="feet">Feet</option>
+                        </select>
+
+                        <strong>to</strong>
+
+                        <select id="toUnit" onchange="convertLength()">
+                            <option value="meters">Meters</option>
+                            <option value="kilometers">Kilometers</option>
+                            <option value="inches">Inches</option>
+                            <option value="feet">Feet</option>
+                        </select>
+                    </div>
+                    <div id="lengthResult" class="result">Converted Length: 0</div>
+                </div>
+            </div>
+
+            <div id="lengthbox" class="content">
+                <h1>Length Converter</h1>
+
+                <div class="converter">
+                    <input type="number" id="lengthInput" placeholder="Enter length" oninput="convertLength()">
+
+                    <div class="parameter">
+                        <select id="fromUnit" onchange="convertLength()">
+                            <option value="meters">Meters</option>
+                            <option value="kilometers">Kilometers</option>
+                            <option value="inches">Inches</option>
+                            <option value="feet">Feet</option>
+                        </select>
+
+                        <strong>to</strong>
+
+                        <select id="toUnit" onchange="convertLength()">
+                            <option value="meters">Meters</option>
+                            <option value="kilometers">Kilometers</option>
+                            <option value="inches">Inches</option>
+                            <option value="feet">Feet</option>
+                        </select>
+                    </div>
+                    <div id="lengthResult" class="result">Converted Length: 0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>

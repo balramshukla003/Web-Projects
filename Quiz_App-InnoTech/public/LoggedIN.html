@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Free Quiz | InnoTech</title>
+    <link rel="icon" href="Photos/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="LoggedIN.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <img src="Photos/logo.png" alt="logo" class="logo" onclick="window.location.href=window.location.href;">
+        <a href="#" id="infoLink1">Student</a>
+        <a href="#" id="infoLink2">Start Quiz</a>
+        <a href="#" id="infoLink3">Solution</a>
+        <a href="#" id="infoLink4">Resources</a>
+        <div class="identity-box" id="ChangeBox">
+            <h1 id="identity">User:null</h1>
+            <h1 id="uName">null</h1>
+        </div>
+    </nav>
+
+    <div id="infoBox-student" class="info-box">
+        <section class="fLoat-section">
+            <p href="#" id="calculator">Calculator</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="">Novel-Story</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="">Sample Paper</p>
+        </section>
+        <section class="fLoat-section">
+            <p id="urse">Courses Offers</p>
+        </section>
+    </div>
+
+    <div id="infoBox-solution" class="info-box">
+        <section class="fLoat-section">
+            <p id="classWise">Classwise</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Coursewise</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Subjectwise</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Sample Paper</p>
+        </section>
+    </div>
+
+    <div id="infoBox-resources" class="info-box">
+        <section class="fLoat-section">
+            <p id="Ebook">E-Books</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Problems </p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">VideosTutorials</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Tools Software</p>
+        </section>
+    </div>
+
+    <main>
+
+    <h1>What's your digital maturity?</h1>
+    <p><strong>check your ability, we will help you to build!</strong></p>
+    <button onclick="showQuiz()">Take the quiz assissment</button>
+
+    </main>
+
+
+    <div id="outer-Layer">
+        <div id="inner-Layer">
+            <p id="qX" class="close">X</p>
+            <h2 class="h1" id="H1">Ques.</h2>
+            <div id="question">
+                <h2 id="ques" class="h1">What is the capital of France?</h2>
+            </div>
+
+            <div class="quesOPT">
+                <button class="optionBtn" id="option1">Madrid</button>
+                <button class="optionBtn" id="option2">Paris</button>
+                <button class="optionBtn" id="option3">Rome</button>
+                <button class="optionBtn" id="option4">Berlin</button>
+            </div>
+            <button id="skip">Skip</button>
+        </div>
+    </div>
+
+    <div id="quizOption" class="takeQuiz-Option">
+        <div class="optionContent">
+            <p id="X" class="close">X</p>
+            <div class="Option-Cards">
+                <div class="card">
+                    <h1 id="random" onclick="QuizQuestion('random')">Random</h1>
+                </div>
+                <div class="card">
+                    <h1 id="subjective" onclick="QuizQuestion('subjective')">Subjective</h1>
+                </div>
+                <div class="card">
+                    <h1 id="maths" onclick="QuizQuestion('maths')">Mathematics</h1>
+                </div>
+                <div class="card">
+                    <h1 id="gk" onclick="QuizQuestion('gk')">General Knowledge</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="outerCNF">
+        <div id="confirm" class="optionContent">
+            <h1>Are you sure you want to quit the quiz!
+            </h1>
+            <div>
+                <button class="btn" id="yes" onclick="confirm('yes')">Yes</button>
+                <button class="btn" id="no" onclick="confirm('no')">No</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="resultOUT">
+        <div id="result" class="optionContent">
+            <h1>30 Question Completed ! </h1>
+            <h1 id="marks">Marks : </h1>
+            <div>
+                <button class="btn" id="ok" onclick="confirm('yes')">OK</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="logout" class="info-box">
+        <h2 id="cx">X</h2>
+        <p id="changePass">Change Password</p>
+        <p id='Logout' onclick="HomePG()">Logout</p>
+    </div>
+
+
+    <script src="LoggedIN.js"></script>
+</body>
+
+</html>

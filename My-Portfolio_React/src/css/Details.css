@@ -1,0 +1,43 @@
+/* Page Section */
+.personal-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.personal-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #222;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ff4c60;
+}
+
+.section p,
+.section ul,
+.section li {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.section ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+.section ul li {
+    margin-bottom: 0.6rem;
+}

@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #d1c5c5;
+}
+.outer-container {
+    display: flex;
+    width: 80%;
+    height: 80vh;
+    overflow: hidden;
+    position: absolute; /* changed from relative to allow centering */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid;
+    border-radius: 20px;
+}
+
+/* Left sidebar */
+#part1 {
+    width: 30%;
+    background-color: rgb(13, 20, 62);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#part1 h1 {
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+}
+
+/* Grid layout for images */
+.contain-image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    width: 100%;
+}
+
+.contain-image img {
+    width: 80px; 
+    height: 80px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: wheat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.contain-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Right content area */
+#part2 {
+    width: 70%;
+    background-color: rgb(81, 81, 125);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#part2 img#LogoIMG {
+   
+    background-color: rgb(209, 223, 204);
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#part2 .content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+}
+#part2 .content h1{
+    color: rgb(174, 161, 161);
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+}
+
+#numbox {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4c4c73;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#display {
+    color: white;
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.buttons button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Close button styling */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #ffffff;
+    font-family: cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 2;
+}
+
+.close:hover {
+    color: red;
+    transform: scale(1.05);
+    text-shadow: 0px 5px 15px #ff6347;
+}
+
+.close:active {
+    transform: scale(0.9);
+}
+
+.converter {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.converter input {
+    padding: 10px 20px;
+    width: 350px;
+    font-size: 1.5rem;border-radius: 20px;
+}
+.converter strong{
+    font-size: 2rem;
+    margin: 10px;
+    color: beige;
+}
+.converter select{
+    padding: 5px 10px;
+    width: 200px;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+.result {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+    color: rgb(193, 204, 193);
+    border: 3px solid;
+    padding: 10px;
+    border-radius: 10px;
+}

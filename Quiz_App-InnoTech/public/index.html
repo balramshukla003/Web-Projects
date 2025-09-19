@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Free Quiz | InnoTech</title>
+    <link rel="icon" href="Photos/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <nav>
+        <img src="Photos/logo.png" alt="logo" class="logo" onclick="window.location.href=window.location.href;">
+        <p href="#" id="infoLink1">For Student</p>
+        <p href="#" id="infoLink2">Take Demo</p>
+        <p href="#" id="infoLink3">Solution</p>
+        <p href="#" id="infoLink4">Resources</p>
+        <p href="#" id="infoLink5">For Teacher</p>
+        <div class="nav-buttons">
+            <button id="quoteBtn">Quote</button>
+            <button id="login">Sign In</button>
+            <button id="register">Sign Up</button>
+        </div>
+    </nav>
+
+
+    <!--Registering Window-->
+
+    <div id="register-window" class="container">
+        <div id="register-content" class="container-content">
+            <h1>How You See Yourself !</h1>
+            <p id="registerX" class="close">X</p>
+
+            <div class="register-option">
+                <div class="option">
+                    <img src="Photos/teachLogo.jpeg" alt="" id="imgTeacher">
+                </div>
+                <div class="option">
+                    <img src="Photos/stuLogo.jpg" alt="" id="imgStudent">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Floating Windows-->
+    <div id="infoBox-student" class="info-box">
+        <section class="fLoat-section">
+            <p id="location_course">Course</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#">Preparation</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#">Book Store</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#">Certification</p>
+        </section>
+        <section class="fLoat-section">
+            <p id="calculator">Calculator</p>
+        </section>
+    </div>
+
+    <div id="infoBox-solution" class="info-box">
+        <section class="fLoat-section">
+            <p id="location_classwise">Classwise</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Coursewise</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Subjectwise</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Sample Paper</p>
+        </section>
+    </div>
+
+    <div id="infoBox-resources" class="info-box">
+        <section class="fLoat-section">
+            <p id="location_Ebook">E-Books</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Problems </p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">VideosTutorials</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Tools Software</p>
+        </section>
+    </div>
+
+    <div id="infoBox-teacher" class="info-box">
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Add Quote</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Host Test</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Sample Paper</p>
+        </section>
+        <section class="fLoat-section">
+            <p href="#" onclick="comingSoon()">Add Questions</p>
+        </section>
+    </div>
+
+
+    <!--Quote Floating Window-->
+    <div id="quote-win" class="container">
+        <div id="quote-content" class="container-content">
+            <p id="quoteX" class="close">X</p>
+            <p class="content" id="quote-text">"Success is not final, failure is not fatal: It is the courage to
+                continue that counts."
+                <br>
+            <h3 id="author">– Winston Churchill </h3>
+            </p>
+            <button id="next" class="next-quote" onclick="fetchQuote()">Next</button>
+        </div>
+    </div>
+
+
+    <!--Login Window-->
+    <div id="login-win" class="container">
+        <div id="login-content" class="container-content">
+            <p id="loginX" class="close">X</p>
+            <h2>Login to InnoTech Quiz</h2>
+            <form class="login-form"  onsubmit="loginUser()">
+                <label for="userId">User Id:</label>
+                <input type="text" id="user" name="userId" placeholder="Enter your userID" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <button class="submit-btn">Login</button>
+                <a style="cursor: pointer;" href="changePassword.html#homePG">Forget Password</a>
+                <p  onclick="Register()" id="NEW">Dont Have an Account! </p>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Teacher Registration Form -->
+    <div id="teacherForm" class="container">
+        <div id="teacherContent" class="container-content">
+            <h2>Registering as a Teacher</h2>
+            <p id="tBack" class="back">&lt;&lt;</p>
+            <p id="teacherX" class="close">X</p>
+            <form class="login-form">
+                <label for="teacherName">Name:</label>
+                <input type="text" id="teacherName" placeholder="Enter your name" required>
+
+                <label for="userID">UserID:</label>
+                <input type="text" id="rtuserID" placeholder="Create unique userID" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="rTpassword" name="password" placeholder="Create your password" required>
+
+                <label for="dob">D.O.B:</label>
+                <input type="text" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" id="tdob" required>
+
+                <label for="teacherEmail">Email:</label>
+                <input type="email" id="teacherEmail" placeholder="Enter your email" required><br>
+                <input type="submit" value="Register as Teacher" onclick="Registeration(event,'Teacher')">
+            </form>
+        </div>
+    </div>
+
+    <!-- Student Registration Form -->
+    <div id="studentForm" class="container">
+        <div id="studentContent" class="container-content">
+            <h2>Registering as a Student</h2>
+            <p id="sBack" class="back">&lt;&lt;</p>
+            <p id="studentX" class="close">X</p>
+
+            <form class="login-form">
+
+                <label for="studentName">Name:</label>
+                <input type="text" id="studentName" placeholder="Enter your name" required>
+
+                <label for="userID">UserID:</label>
+                <input type="text" id="rsuserID" placeholder="Create unique userID" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="rSpassword" name="password" placeholder="Create your password" required>
+
+
+                <label for="dob">D.O.B:</label>
+                <input type="text" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" id="sdob" required>
+
+                <label for="studentEmail">Email:</label>
+                <input type="email" id="studentEmail" placeholder="Enter your email" required>
+
+                <input type="submit" id="RS" value="Register as Student" onclick="Registeration(event,'Student')">
+            </form>
+        </div>
+    </div>
+
+    <main>
+
+        <div id="firstCont">
+            <h1 id="h1">Welcome to <strong>InnoTech</strong> Quiz App
+                <p id="quot">Unlock the power of knowledge and embark on a journey of discovery!</p>
+            </h1>
+            <div class="divider-line"></div>
+            <p id="ownD"> Your education matters—let’s make learning fun and interactive!</p>
+            <button class="button" onclick="Login()">Get Started</button>
+        </div>
+
+        <div id="secondCont">
+            <h2 id="shadow">Trusted by 80+ Student out of 100</h2>
+            <h1>Now we provide resources for your study. <br>
+                Here's How You Will Get</h1>
+        </div>
+
+        <div class="thirdCont">
+
+            <div class="textCont">
+                <h1>01</h1>
+                <p>Visit Home Page</p>
+            </div>
+
+            <div class="imgCont">
+                <img src="Photos/resource1.jpg" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="thirdCont">
+
+            <div class="imgCont">
+                <img src="Photos/resource2.jpg" alt="">
+            </div>
+
+            <div class="textCont">
+                <h1>02</h1>
+                <p>Navigate to top Navigation Bar </p>
+            </div>
+
+        </div>
+
+        <div class="thirdCont">
+
+            <div class="textCont">
+                <h1>03</h1>
+                <p>Navigate to Resource option in Navigation-Bar</p>
+            </div>
+
+            <div class="imgCont">
+                <img src="Photos/resource3jpg.jpg" alt="">
+            </div>
+
+        </div>
+
+        <div class="thirdCont">
+
+            <div class="imgCont">
+                <img src="Photos/resource4.png" alt="">
+            </div>
+
+            <div class="textCont">
+                <h1>04</h1>
+                <p>A Dropdown window will appear with all Resources link.</p>
+            </div>
+        </div>
+        <h1 id="lastLine">Feel Free To Connect With Us!</h1>
+        </div>
+
+    </main>
+
+
+    <div id="comingSoon" class="container">
+        <div id="comingSoon-content">
+            <p id="coming-close" class="close" onclick="comingSoonClose()">X</p>
+            <h1>COMING SOON.....</h1>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="quick-links">
+            <p href="#">Home</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

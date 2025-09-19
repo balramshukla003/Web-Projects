@@ -1,0 +1,395 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    /* Ensures padding and border are included in the element's total width and height */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f4f4f4 30%, #e2e2e2 100%);
+    color: #333;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+
+}
+
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(90deg, #2c3e50, #34495e);
+    /* Gradient for navbar */
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Ensure it stays above other elements */
+}
+
+nav:hover {
+    background: linear-gradient(90deg, #34495e, #2c3e50);
+    /* Invert gradient on hover */
+}
+
+.logo img {
+    height: 80px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Added filter effect */
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    /* Scale up logo */
+    filter: brightness(1.1);
+    /* Brighten the logo on hover */
+}
+
+.nav-links a {
+    color: #fff;
+    margin-right: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: 1.2rem;
+
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #f39c12;
+    /* Underline color */
+    transition: width 0.3s ease;
+    /* Smooth width transition */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    /* Positioning the underline */
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+    /* Change text color on hover */
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    /* Expand underline on hover */
+}
+
+.nav-buttons button {
+    padding: 12px;
+    width: 100px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 25px;
+    /* More rounded button */
+    color: rgb(255, 255, 255);
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Added transform */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Shadow for button */
+}
+
+.nav-buttons button:hover {
+    background-color: #e67e22;
+    /* Darker orange on hover */
+    transform: translateY(-2px);
+    /* Slight upward movement */
+}
+
+/* Main Section */
+main {
+    margin-top: auto;
+}
+
+.landing-section {
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 10rem;
+}
+
+.landing-section h2 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow */
+}
+
+.landing-section p {
+    font-size: 1.3rem;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    /* Scale effect on hover */
+}
+
+.landing-section p:hover {
+    transform: translateY(-2px);
+    /* Slight upward movement */
+}
+
+.design-container {
+    background-color: #34495e;
+    padding: 50px;
+    padding-left: 0px;
+    margin-bottom: 5rem;
+}
+
+.design-container h1 {
+    font-size: 3.5rem;
+    padding-left: 30px;
+    color: white;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.course-section {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Arrange sections in a column */
+    align-items: center;
+    /* Center align items horizontally */
+    margin: 40px 0;
+}
+
+section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(31, 9, 9, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    width: 75%;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    transition: transform 0.3s ease;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Course Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 2rem;
+}
+
+.course-item {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    /* Increased padding for better spacing */
+    border-radius: 12px;
+    /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /* Added transitions */
+    opacity: 0;
+    /* Start hidden */
+    transform: translateY(20px);
+    /* Start lower */
+    animation: fadeInUp 0.6s forwards;
+    /* Animation for fade-in effect */
+}
+
+.course-item.visible {
+    opacity: 1;
+    /* Fully visible */
+    transform: translateY(0);
+    /* Move to original position */
+}
+
+.course-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow */
+    transform: translateY(-5px);
+    /* Slight upward movement */
+    background-color: #e8f4f8;
+    /* Light blue background on hover */
+}
+
+.course-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #3498db;
+    transition: color 0.3s ease;
+    /* Color transition */
+}
+
+.course-item h3:hover {
+    color: #2980b9;
+    /* Change color on hover */
+}
+
+.course-item p {
+    font-size: 1rem;
+}
+
+.cont {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cont p {
+    font-size: 1.5rem;
+    padding: 20px;
+    padding-left: 0px;
+    color: #e67e22;
+    text-align: center;
+}
+
+.cont ul {
+    text-align: left;
+}
+
+.cont button {
+    margin-top: 50px;
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #fffcfc;
+    padding: 10px;
+    cursor: pointer;
+    font-size: large;
+    border-radius: 30px;
+    width: 150px;
+    background:#009087;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+
+}
+.cont button:active{
+    scale: 0.8;
+}
+.cont button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.cont button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #009087;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.cont button:hover {
+    color: #ffffff;
+    border: 1px solid #34495e;
+}
+
+.cont button:hover:before {
+    top: -35%;
+    background-color: #34495e;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.cont button:hover:after {
+    top: -45%;
+    background-color: #34495e;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+.course img{
+    height: 30px;
+    position: absolute;
+    top: 230px;
+    right: 100px;
+    padding: 5px;
+    
+}
+.course img:hover{
+    border: 2px solid #34495e;
+    border-radius: 10px;
+    scale: 1.05;
+     box-shadow: 6px 6px 12px #763232, -6px -6px 12px #763232; 
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: linear-gradient(90deg, #2c3e50, #34495e);
+    /* Gradient for footer */
+    color: #fff;
+    transition: background-color 0.3s ease;
+    /* Footer background transition */
+}
+
+footer:hover {
+    background: linear-gradient(90deg, #34495e, #2c3e50);
+    /* Invert gradient on hover */
+}
+
+footer p {
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}

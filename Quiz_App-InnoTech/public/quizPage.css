@@ -1,0 +1,83 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.cardContent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 580px;
+    height: 70%;
+    background-color: white;
+    border: 15px solid #12365f;
+    box-shadow: 0 5px 10px rgba(90, 117, 141, 0.6);
+    border-radius: 60px;
+    text-align: center;
+
+    /* Flexbox to center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Padding for some space around the content */
+}
+
+.question {
+    display: flex;
+    font-size: 2em;
+    align-items: center;
+    color: #333333;
+    margin-bottom: 60px; /* Slight margin to add spacing between question and options */
+}
+
+.options {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Center align the buttons horizontally */
+}
+
+.option {
+    width: 80%; /* Make the buttons take up 80% of the card's width */
+    background-color: #12365f;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ;
+}
+
+.option:hover {
+    background-color: #37a205;
+}
+.option:active{
+    scale: 0.95;
+    background-color: #287e00
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: #ab9494;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.close:hover {
+    color: red;
+    text-shadow: 0px 5px 15px #ff6347;
+}

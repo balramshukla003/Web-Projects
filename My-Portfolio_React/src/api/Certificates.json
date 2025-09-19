@@ -1,0 +1,128 @@
+[
+  {
+    "title": "Career Edge - IT for Non-IT",
+    "issuer": "TCS iON",
+    "date": "15 Jan 2025",
+    "link": "https://drive.google.com/file/d/1rt5FleSpSSiMq-Ygai0XWzSZVAml-wsr/view?usp=sharing",
+    "image": "https://github.com/balramshukla003/My-Portfolio_React/blob/main/src/images/tcsIon.png"
+  },
+  {
+    "title": "AI for Beginners",
+    "issuer": "HP Foundation",
+    "date": "01 Jan 2025",
+    "link": "https://www.life-global.org/certificate/1f417f12-0930-40d7-a4f4-d58b63a81f6a",
+    "image": "src/images/AI Hp.png"
+  },
+  {
+    "title": "Software Engineering and Agile Software Development",
+    "issuer": "Infosys Springboard",
+    "date": "01 Aug 2024",
+    "link": "https://drive.google.com/file/d/1iaf4TirL-PsGA5HVnf4onU5ZnEUMtfLn/view?usp=sharing",
+    "image": "src/images/SE infys.png"
+  },
+  {
+    "title": "Software Engineering Job Simulation",
+    "issuer": "Forage",
+    "date": "13 Aug 2024",
+    "link": "https://drive.google.com/file/d/1FBb8A88iIAGA6VARFH0ECmgAJYfHVUa9/view?usp=sharing",
+    "image": "src/images/SE Forage.png"
+  },
+  {
+    "title": "Java (Basic)",
+    "issuer": "HackerRank",
+    "date": "16 Aug 2024",
+    "link": "https://www.hackerrank.com/certificates/7537c56733c0",
+    "image": "src/images/Java basic.png"
+  },
+  {
+    "title": "Applied Skill",
+    "issuer": "Google",
+    "date": "01 Sep 2024",
+    "link": "https://drive.google.com/file/d/1kEdkD2dni8Iy0NIiekO5nIvBAhUWa1w5/view?usp=sharing",
+    "image": "src/images/Google Aplied.png"
+  },
+  {
+    "title": "Web Development Virtual Intern",
+    "issuer": "CodeSoft",
+    "date": "23 July 2024",
+    "link": "https://drive.google.com/file/d/1LwZMpG0a9hYBocHquyZUu6mcolLdteI9/view?usp=sharing",
+    "image": "src/images/codesoft.png"
+  },
+  {
+    "title": "Resume Writing and Job Interviewing",
+    "issuer": "HP Foundation",
+    "date": "01 Feb 2025",
+    "link": "https://www.life-global.org/certificate/2fc80309-9901-438e-8846-066857d5241d",
+    "image": "src/images/Email Hp.png"
+  },
+  {
+    "title": "JavaScript (Basic)",
+    "issuer": "HackerRank",
+    "date": "3 Dec 2024",
+    "link": "https://www.hackerrank.com/certificates/a801a87ad059",
+    "image": "src/images/JavaScript HackerRank.png"
+  },
+  {
+    "title": "High Impact Presentation",
+    "issuer": "Infosys Springboard",
+    "date": "04 Aug 2024",
+    "link": "https://drive.google.com/file/d/1nDgFPx7crHV23XH_45IcC16BiInz6Tmi/view?usp=sharing",
+    "image": "src/images/Presentation infys.png"
+  },
+  {
+    "title": "Solutions Architecture Job Simulation",
+    "issuer": "Forage",
+    "date": "16 Aug 2024",
+    "link": "https://drive.google.com/file/d/1aYl6YvK5GSDeYl_WMrp6orV5mABj8V3f/view?usp=sharing",
+    "image": "src/images/AWS Forage.png"
+  },
+  {
+    "title": "CSS (Basic)",
+    "issuer": "HackerRank",
+    "date": "3 Dec 2024",
+    "link": "https://www.hackerrank.com/certificates/9ca00cd992bf",
+    "image": "src/images/CSS HackerRank.png"
+  },
+  {
+    "title": "Time Management",
+    "issuer": "Infosys Springboard",
+    "date": "04 Aug 2024",
+    "link": "https://drive.google.com/file/d/1r_A2KViyIHm_EBKsJAJD95iHGyigHugs/view?usp=sharing",
+    "image": "src/images/Time infys.png"
+  },
+  {
+    "title": "Effective Leadership",
+    "issuer": "HP Foundation",
+    "date": "01 Feb 2025",
+    "link": "https://www.life-global.org/certificate/154fddd4-def7-4341-a507-694f416616a3",
+    "image": "src/images/Leadership Hp.png"
+  },
+  {
+    "title": "Introduction to NoSQL Databases",
+    "issuer": "Infosys Springboard",
+    "date": "01 Aug 2024",
+    "link": "https://drive.google.com/file/d/1kom1QmS1p14Pz8Z-aM3S3NwbFG7JNypU/view?usp=sharing",
+    "image": "src/images/NoSQL infys.png"
+  },
+  {
+    "title": "Developer and Technology Job Simulation",
+    "issuer": "Forage",
+    "date": "28 July 2024",
+    "link": "https://drive.google.com/file/d/11FAyNCNZxT-ROsiRWn4-nFtxOI-zuFhR/view?usp=sharing",
+    "image": "src/images/AccentureUk Forage.png"
+  },
+  {
+    "title": "Email Writing",
+    "issuer": "Infosys Springboard",
+    "date": "04 Aug 2024",
+    "link": "https://drive.google.com/file/d/1f3W1OK4G9xygV8EjrzMAxj-gLMSB43Xt/view?usp=sharing",
+    "image": "src/images/Email infys.png"
+  },
+  {
+    "title": "Software Engineer Intern",
+    "issuer": "HackerRank",
+    "date": "03 Sep 2024",
+    "link": "https://www.hackerrank.com/certificates/07bb32f4e032",
+    "image": "src/images/SE Intern HackerRank.png"
+  }
+]
