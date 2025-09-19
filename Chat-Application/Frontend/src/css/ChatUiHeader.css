@@ -1,0 +1,94 @@
+.chat-ui-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.login-user-info,
+.chat-ui-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+.chat-ui-header .active-counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 3px 7px;
+}
+
+.chat-ui-header .active-dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(3, 174, 3);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px rgba(3, 102, 3, 0.5);
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0, 128, 0, 0.7);
+    }
+}
+
+
+@keyframes pulse-small {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+    }
+
+    50% {
+        transform: scale(1.3);
+        box-shadow: 0 0 10px rgba(0, 128, 0, 0.7);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .chat-ui-header {
+        gap: 10px;
+    }
+
+    .login-user-info,
+    .chat-ui-header h2 {
+        gap: 10px;
+        text-align: center;
+
+    }
+
+    .chat-ui-header .active-counter {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-ui-header {
+        padding: 5px 10px;
+    }
+
+    .login-user-info,
+    .chat-ui-header h2 {
+        font-size: 14px;
+        gap: 5px;
+    }
+}
