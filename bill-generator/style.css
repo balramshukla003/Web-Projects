@@ -1,0 +1,255 @@
+/* --- BASE RESET --- */
+:root {
+    --bg-app: #f0f2f5;
+    --sidebar-bg: #ffffff;
+    --text-main: #333;
+    --border-light: #ddd;
+    --primary-theme: #333; /* Default theme color */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-app);
+    overflow: hidden; /* App feel */
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* --- LEFT PANEL (CONTROLS) --- */
+.controls-panel {
+    width: 350px;
+    background: var(--sidebar-bg);
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.05);
+}
+
+.panel-header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+}
+.panel-header h2 { margin: 0; font-size: 18px; }
+
+.form-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.control-group {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+.control-group h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.toggle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+.toggle-grid hr {
+    grid-column: span 2;
+    width: 100%;
+    border: 0;
+    border-top: 1px dashed #ccc;
+    margin: 5px 0;
+}
+
+label {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #444;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.btn-primary { background: #28a745; color: white; }
+.btn-primary:hover { background: #218838; }
+.btn-secondary { background: #007bff; color: white; }
+.btn-del { 
+    background: none; border: none; color: #dc3545; cursor: pointer; font-size: 14px;
+}
+
+.download-section {
+    margin-top: auto;
+    padding-top: 20px;
+}
+.hint {
+    font-size: 12px;
+    color: #666;
+    background: #fff3cd;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* --- RIGHT PANEL (PREVIEW) --- */
+.preview-panel {
+    flex: 1;
+    background: #525659;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.invoice-paper {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    padding: 15mm;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- INVOICE STYLING --- */
+
+/* Editable Interaction */
+.editable:hover {
+    background-color: rgba(255, 255, 0, 0.1);
+    outline: 1px dashed #ccc;
+    cursor: text;
+}
+.editable:focus {
+    outline: 2px solid #007bff;
+    background: #fff;
+}
+[contenteditable]:empty:before {
+    content: attr(placeholder);
+    color: #999;
+}
+
+/* Header */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.logo-area img {
+    max-height: 80px;
+    max-width: 150px;
+}
+.company-info {
+    flex: 1;
+    margin-left: 20px;
+}
+.company-info h1 { margin: 0 0 5px 0; font-size: 24px; text-transform: uppercase; }
+.company-info p { margin: 2px 0; font-size: 14px; }
+.bill-title h2 { margin: 0; font-size: 32px; letter-spacing: 2px; text-align: right; }
+
+.divider { height: 2px; border: none; margin: 10px 0 20px 0; }
+
+/* Grid Info */
+.info-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.col-client { flex: 2; }
+.col-meta { flex: 1; text-align: right; }
+
+.client-name { font-size: 18px; font-weight: bold; margin: 5px 0; }
+.meta-row { margin-bottom: 5px; }
+.lbl { font-weight: bold; color: #555; font-size: 14px; }
+.val { font-size: 14px; margin-left: 5px; }
+
+/* Table */
+.table-wrapper { flex: 1; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+th { padding: 10px; text-align: left; color: white; font-size: 14px; border: 1px solid #000; }
+td { padding: 8px 10px; border: 1px solid #ddd; vertical-align: top; font-size: 14px; }
+.input-look { min-width: 50px; display: inline-block; }
+
+/* Totals */
+.totals-layout {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    page-break-inside: avoid;
+}
+.words-area { width: 60%; font-size: 14px; padding-right: 20px; }
+.math-area { width: 35%; }
+.math-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+.grand-total {
+    font-size: 18px;
+    font-weight: bold;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #000;
+    margin-top: 5px;
+    padding: 10px 0;
+}
+
+/* Footer */
+.footer-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    page-break-inside: avoid;
+}
+.notes { font-size: 12px; color: #555; max-width: 60%; }
+.sign-line {
+    width: 200px;
+    border-bottom: 1px dashed #000;
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+/* Utility */
+.hidden { display: none !important; }
+.theme-bg { background-color: var(--primary-theme); }
+.theme-text { color: var(--primary-theme); }
+.italic { font-style: italic; }
+
+/* PRINT MEDIA */
+@media print {
+    .controls-panel { display: none; }
+    .preview-panel { padding: 0; background: white; display: block; }
+    .invoice-paper {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        padding: 0; /* Let page margins handle it */
+        border: none;
+    }
+    .no-print { display: none; }
+    
+    /* Remove visual edit cues for print */
+    .editable:hover { background: none; outline: none; }
+    .editable { outline: none; }
+}
